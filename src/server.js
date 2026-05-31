@@ -1,6 +1,7 @@
 'use strict';
-const express = require('express');
-const path    = require('path');
+const express     = require('express');
+const path        = require('path');
+const compression = require('compression');
 
 const { getManifest, catalogHandler, metaHandler, streamHandler, prewarmTorrentCache } = require('./addon');
 const { artworkSvg, ensureArtwork } = require('./artwork');
@@ -15,6 +16,9 @@ ensureArtwork(catalog);
 
 // ─── App ──────────────────────────────────────────────────────────────────────
 const app = express();
+
+// Gzip all JSON/HTML/SVG responses
+app.use(compression());
 
 // CORS — required by Stremio for any remote addon
 app.use((_req, res, next) => {
@@ -109,3 +113,17 @@ server.on('error', (err) => {
         console.error('Server error:', err.message);
     process.exit(1);
 });
+
+// ─── Graceful shutdown ────────────────────────────────────────────────────────
+// Railway sends SIGTERM before stopping a container. We finish in-flight
+// requests (up to 10 s) before exiting so no stream requests are dropped mid-deploy.
+function shutdown(signal) {
+    console.log(`\n${signal} received — shutting down gracefully…`);
+    server.close(() => {
+        console.log('Server closed. Exiting.');
+        process.exit(0);
+    });
+    setTimeout(() => { console.error('Forced exit after timeout.'); process.exit(1); }, 10_000);
+}
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT',  () => shutdown('SIGINT'));

@@ -6,7 +6,8 @@ const { getMeta }                      = require('./metadata');
 const { artworkUrls }                  = require('./artwork');
 
 const STREAM_CACHE_TTL_MS = Number(process.env.STREAM_CACHE_TTL_MS || 10 * 60 * 1000);
-const DEBRID_TIMEOUT_MS   = Number(process.env.DEBRID_TIMEOUT_MS   || 4500);
+// Debrid resolvers now bail instantly on cache-miss, so 3 s is plenty.
+const DEBRID_TIMEOUT_MS   = Number(process.env.DEBRID_TIMEOUT_MS   || 3000);
 
 // ─── Lookup maps ──────────────────────────────────────────────────────────────
 const byId   = {};
@@ -176,23 +177,18 @@ async function buildStreams(runtime, type, id, cacheKey) {
         const ep = item.episodes.find(e => e.season === season && e.episode === episode);
         if (!ep) return [];
 
-        // 1. Google Drive
-        if (runtime.showGDrive) {
-            for (const [quality, url] of Object.entries(ep.gdrive || {})) {
-                streams.push({
-                    name:          `[NumeralJ]\n${quality} GDrive`,
-                    title:         `${ep.title}\n${quality} · Google Drive`,
-                    externalUrl:   url,
-                    behaviorHints: { notWebReady: true, bingeGroup: binge },
-                });
-            }
-        }
-
         const resolvedTorrentStreams = await Promise.all(
             item.streams.map(async s => ({ ...s, ...(await resolveFileIdx(s.infoHash, ep.episode, ep.title)) }))
         );
 
-        // 2. Raw infoHash + fileIdx
+        // 1. Debrid direct links — best experience, shown first
+        const debridGroups = await Promise.all(resolvedTorrentStreams.map(async s => {
+            const ds = await buildDebridStreams(s.infoHash, s.fileIdx, s.quality, binge, runtime, s.targetFile);
+            return ds.map(d => ({ ...d, title: `${ep.title}\n${d.title}` }));
+        }));
+        streams.push(...debridGroups.flat());
+
+        // 2. Raw infoHash + fileIdx — picked up by Stremio/external debrid
         if (runtime.showRawTorrents) {
             for (const s of resolvedTorrentStreams) {
                 streams.push({
@@ -205,29 +201,29 @@ async function buildStreams(runtime, type, id, cacheKey) {
             }
         }
 
-        // 3. Debrid direct links
-        const debridGroups = await Promise.all(resolvedTorrentStreams.map(async s => {
-            const ds = await buildDebridStreams(s.infoHash, s.fileIdx, s.quality, binge, runtime, s.targetFile);
-            return ds.map(d => ({ ...d, title: `${ep.title}\n${d.title}` }));
-        }));
-        streams.push(...debridGroups.flat());
+        // 3. Google Drive — fallback, opens browser
+        if (runtime.showGDrive) {
+            for (const [quality, url] of Object.entries(ep.gdrive || {})) {
+                streams.push({
+                    name:          `[NumeralJ]\n${quality} GDrive`,
+                    title:         `${ep.title}\n${quality} · Google Drive`,
+                    externalUrl:   url,
+                    behaviorHints: { notWebReady: true, bingeGroup: binge },
+                });
+            }
+        }
 
         return setCachedStreams(cacheKey, streams);
     }
 
     // ── Movie ─────────────────────────────────────────────────────────────────
 
-    // 1. Google Drive
-    if (runtime.showGDrive) {
-        for (const [quality, url] of Object.entries(item.gdrive || {})) {
-            streams.push({
-                name:          `[NumeralJ]\n${quality} GDrive`,
-                title:         `${item.title}\n${quality} · Google Drive`,
-                externalUrl:   url,
-                behaviorHints: { notWebReady: true },
-            });
-        }
-    }
+    // 1. Debrid direct links
+    const debridGroups = await Promise.all(item.streams.map(async s => {
+        const ds = await buildDebridStreams(s.infoHash, 0, s.quality, binge, runtime, null);
+        return ds.map(d => ({ ...d, title: `${item.title}\n${d.title}` }));
+    }));
+    streams.push(...debridGroups.flat());
 
     // 2. Raw infoHash
     if (runtime.showRawTorrents) {
@@ -242,12 +238,17 @@ async function buildStreams(runtime, type, id, cacheKey) {
         }
     }
 
-    // 3. Debrid direct links
-    const debridGroups = await Promise.all(item.streams.map(async s => {
-        const ds = await buildDebridStreams(s.infoHash, 0, s.quality, binge, runtime, null);
-        return ds.map(d => ({ ...d, title: `${item.title}\n${d.title}` }));
-    }));
-    streams.push(...debridGroups.flat());
+    // 3. Google Drive
+    if (runtime.showGDrive) {
+        for (const [quality, url] of Object.entries(item.gdrive || {})) {
+            streams.push({
+                name:          `[NumeralJ]\n${quality} GDrive`,
+                title:         `${item.title}\n${quality} · Google Drive`,
+                externalUrl:   url,
+                behaviorHints: { notWebReady: true },
+            });
+        }
+    }
 
     return setCachedStreams(cacheKey, streams);
 }

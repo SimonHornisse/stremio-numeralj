@@ -1040,5 +1040,29 @@
       "length": 8434469012,
       "idx": 0
     }
+  ],
+  "044020adc17c87f04def32b566fff66f090eef99": [
+    {
+      "name": "Star.Wars.Episode.II.Attack.of.the.Clones.Extended.Edition.x265.HDR.2160p-v2-NumeralJ.mkv",
+      "path": "Star.Wars.Episode.II.Attack.of.the.Clones.Extended.Edition.x265.HDR.2160p-v2-NumeralJ.mkv",
+      "length": 17911511267,
+      "idx": 0
+    }
+  ],
+  "79d5c271cdc338ca93ffda5c41673d0c43dc4464": [
+    {
+      "name": "Star.Wars.Episode.III.Revenge.of.the.Sith.Siege.of.Mandalore.Cut.1080p-v4-NumeralJ.mkv",
+      "path": "Star.Wars.Episode.III.Revenge.of.the.Sith.Siege.of.Mandalore.Cut.1080p-v4-NumeralJ.mkv",
+      "length": 14410330732,
+      "idx": 0
+    }
+  ],
+  "961970c1caca3103a74359f0ef39d44b3f66218c": [
+    {
+      "name": "Star.Wars.Episode.III.Revenge.of.the.Sith.Siege.of.Mandalore.Cut.x265.HDR.2160p-v4-NumeralJ.mkv",
+      "path": "Star.Wars.Episode.III.Revenge.of.the.Sith.Siege.of.Mandalore.Cut.x265.HDR.2160p-v4-NumeralJ.mkv",
+      "length": 29167753175,
+      "idx": 0
+    }
   ]
 }
