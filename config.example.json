@@ -1,0 +1,10 @@
+{
+  "directDebrid": true,
+  "showGDrive": true,
+  "showRawTorrents": true,
+  "debrid": {
+    "torbox": "",
+    "realdebrid": "",
+    "alldebrid": ""
+  }
+}

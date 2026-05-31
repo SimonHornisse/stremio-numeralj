@@ -1,0 +1,1341 @@
+[
+  {
+    "id": "numeralj_1",
+    "imdbId": "tt0120915",
+    "type": "movie",
+    "title": "Star Wars Episode I - The Phantom Menace Extended Edition",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "8c213a06657d7c4de61a286617970d622c033368"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "592b9effa4e8d1a1a7ea6e513cc4ec0e1d69a021"
+      }
+    ],
+    "gdrive": {
+      "1080p": "https://drive.google.com/file/d/1pf91iH539Z-Ezfod4F2in32Kd8lyLt43/view",
+      "4K HDR": "https://drive.google.com/file/d/1rgpY4RxTJsHqvKrAfRkcU7AfACQImSgm/view"
+    }
+  },
+  {
+    "id": "numeralj_2",
+    "imdbId": "tt0121765",
+    "type": "movie",
+    "title": "Star Wars Episode II - Attack of the Clones Extended Edition",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "3589b09e21e7e4246cde9522dcc81a5a9a1c7fcc"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "044020adc17c87f04def32b566fff66f090eef99"
+      }
+    ],
+    "gdrive": {
+      "1080p": "https://drive.google.com/file/d/1-XiH4ZPjWijuVXsiM5hgmhM--O4cyfGs/view",
+      "4K HDR": "https://drive.google.com/file/d/1CYl2bYR29d-PEwsdfAYgVICZK7FsF-rL/view"
+    }
+  },
+  {
+    "id": "numeralj_3",
+    "imdbId": "tt0121766",
+    "type": "movie",
+    "title": "Star Wars Episode III - Revenge of the Sith: Siege of Mandalore Supercut",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "79d5c271cdc338ca93ffda5c41673d0c43dc4464"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "961970c1caca3103a74359f0ef39d44b3f66218c"
+      }
+    ],
+    "gdrive": {
+      "1080p": "https://drive.google.com/file/d/1et4QHIkBOj4qwvs1Z1y0OuxWST9MBiVE/view",
+      "4K HDR": "https://drive.google.com/file/d/1SeHCmwLf69JS1J1Bk1mm-yv9IcIJjA5m/view"
+    }
+  },
+  {
+    "id": "numeralj_4",
+    "imdbId": "tt0377090",
+    "type": "series",
+    "title": "Star Wars Clone Wars (2003) Re-Edited",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "65152ff73f2ff0fde7214343566d4a553c11b8ed"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "fa18c8d5dc443d8ac43da4334daa49237181a0b3"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Episode 1",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1FtKJT1wf2PUm8A7wvgWWthTm8duZv9xC/view",
+          "4K HDR": "https://drive.google.com/file/d/1dePIO_a_49CRj4VtDF6l7A8Rbht7Zfox/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Episode 2",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1YpTkqL2R8-WZilaqjsbCHgfkvkCYlhad/view",
+          "4K HDR": "https://drive.google.com/file/d/1yXyK7_9EjxNr7jNKntHAz7UKnafk2YK2/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Episode 3",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1R32PsKbVrQimpTjWu0w_inOXzxE7idqw/view",
+          "4K HDR": "https://drive.google.com/file/d/1q6abyP6lSPTb1lSSyQBYVuYHWoT_J-ZT/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Episode 4 - Battle of Coruscant",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1XFWXX8Oj5jqNjDIe9s8jZoiiG7zVJbMP/view",
+          "4K HDR": "https://drive.google.com/file/d/1STR2OzeqBXG0MnL5xOfmQD0Ua9uw9q2Y/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_5",
+    "imdbId": "tt0458290",
+    "type": "series",
+    "title": "Star Wars: The Clone Wars - TV Film Cuts (Complete Series)",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "bc4f0d9df533e39187ffa11e36ffcbf66597b035"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "d51f7b71838577c23f53076484c0385cd3b9a725"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 0,
+        "title": "The Clone Wars Film (2008) - Extended Edition",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1g3hjuWGaV-8WDd2GCZpdn1MCKpUCOyIN/view",
+          "4K HDR": "https://drive.google.com/file/d/1xELSY3HklfJiVXlarlbxCY0TTlptGIwB/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "0.0 Clone Cadets",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1EgnK2NO6tFRew5Z88gp7CpCgPJH5ENy_/view",
+          "4K HDR": "https://drive.google.com/file/d/11fS3m6cP98T1aMFcqGbB4xBZ5I-I0Zt3/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "0.1 The Malevolence Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1BDn5E1ygaK9THEXeNPYSVdldZ7r6OuqB/view",
+          "4K HDR": "https://drive.google.com/file/d/1BHProucvpGAIkuI0b3dCHZRpel5fR9zS/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "0.1a Rookies",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1JDNiytE7VOGWHSJwPwCuDw12Ea7xrgsY/view",
+          "4K HDR": "https://drive.google.com/file/d/1Rpr5EX0RLuKJP0FiwUmzIcXCFh9USsiU/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "0.2 Duel of the Droids Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1sMIdJYNPNARzNRtuSLdnJSSa2WO0cGsf/view",
+          "4K HDR": "https://drive.google.com/file/d/1u4hLWywAkRN9pgidIZDOYfr_4NaQ01od/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "0.3 The Gunray Chase Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Q-pQ7rJtfHhGsDyAq-FHmaHs7vauPi-J/view",
+          "4K HDR": "https://drive.google.com/file/d/1Z55Tk1dC-4Bv8CAQOegc5bluhtdQfwPB/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "0.4 Dooku Captured Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1MkU4Vs10ohJvs_G8hUehx6CNY81ob4gq/view",
+          "4K HDR": "https://drive.google.com/file/d/1_6c0I_b598O3V2eSnfygeCcOXwV43I0R/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "0.5 Jedi Crash Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1gqOI6AiSaFNi1vIcBkoGi89sJeFM-OKC/view",
+          "4K HDR": "https://drive.google.com/file/d/1TgjK70sj3ayA-XsH_yMddM-iOluZqhA7/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "0.5a Trespass",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1jYAAWsqWashPUHWAZQCtda_-MlpSoy8n/view",
+          "4K HDR": "https://drive.google.com/file/d/1KBhB4LAHuM9-Qnk74Sc0KhNOQd2yY79o/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "title": "0.6 Blue Shadow Virus Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1n9fYhavatCZv6HcfYiFUdf1fEocEZEIk/view",
+          "4K HDR": "https://drive.google.com/file/d/1NEj2ugWV-tYLpg0FVGmROyZcqjIfiqEO/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "0.7 The Battle of Ryloth Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1prJb_sYWtJKput48rPejMs5mS0RuUnJt/view",
+          "4K HDR": "https://drive.google.com/file/d/1T63fWZTGf8xoMUIvxZV_ZA8MZO-EF8pE/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "title": "0.7a Bounty Hunters",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1fLVkBEVOLW4Ithegxn1FozMl4tWcb7GS/view",
+          "4K HDR": "https://drive.google.com/file/d/1ABHQb0v4iy3OKZhHSIvXJcaACZOORLae/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "0.7b The Zillo Beast Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1ZzeW_i7xUV32tyC30YcD64V5dkYt7sNO/view",
+          "4K HDR": "https://drive.google.com/file/d/1F6zdObjRoOsFKxvlF939xj_7wIpSQ4Iz/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "0.8 The Second Battle of Geonosis Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Ty2lUoznPjh4no5BnpW0UjjAZTxOJzmm/view",
+          "4K HDR": "https://drive.google.com/file/d/1yhajeiD9uvc6ok9yM4b6MRyXrZr7W9TH/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "0.9 The Deserter Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1h5gYiJ3i5Z4ymrKnsreMLX5GDLEXgFLX/view",
+          "4K HDR": "https://drive.google.com/file/d/1shhYrHqzazkoF79mmv1EE0QYtKsGOQFB/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "01 - The Mandalore Plot Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1aWqedymcaDObNHLRle1waGLUMAzWtgq4/view",
+          "4K HDR": "https://drive.google.com/file/d/1HS91DJiOxaOUXVNTZX4U6anKwGW1iuSD/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 16,
+        "title": "1.0a The Young Boba Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1VRmwp32TX2ZNFgsip-CS2S5HlKHU9_-Z/view",
+          "4K HDR": "https://drive.google.com/file/d/1sDjIC6F5McsGEKjZTpRycjSI4LAH0eiv/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 17,
+        "title": "1.0b Corruption Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Hy3q9U78bEaa8Y6aWhgAEPZ1PD0jNIbY/view",
+          "4K HDR": "https://drive.google.com/file/d/1uM1thYzGtp3MUFfK56O8fODXXIuQ5LU0/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 18,
+        "title": "1.0c Assassin",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1zKZIjoeNlQN5ds-2Z1Tw_pdXVDhlBqBy/view",
+          "4K HDR": "https://drive.google.com/file/d/1j0La0ZKw4P2MWMxp7AGVLkltcOqY1pZD/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "title": "1.0d Arc Troopers",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Xm2dOyblC9Es-NKP1_obi30aII517_xV/view",
+          "4K HDR": "https://drive.google.com/file/d/1-0Dnjfgi6lOql4eHNnoC2mdNFO0jB5XV/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "title": "1.0e Sphere of Influence",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1t3WO9rfMACE802IVKrnP83OyBRnWOu8L/view",
+          "4K HDR": "https://drive.google.com/file/d/1Npwu_FaFjQot2uLWfqZXcIxHWUKM5XuZ/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "title": "1.1 The Menace of Cad Bane Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1GrJjlkCo4eA-MpHQAWKzVNMa17CTGBbZ/view",
+          "4K HDR": "https://drive.google.com/file/d/1AnH1RTw7uIc0z9-IVpcbZcleYD5-lcBX/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 22,
+        "title": "1.2 Lightsaber Lost",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1KFZrMlPWm4utIA1-lzs71FiBcGFdiUhl/view",
+          "4K HDR": "https://drive.google.com/file/d/16CGDayPqyDplp6XS_9_ARFuRr9Cp2qkf/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 23,
+        "title": "1.9 The Heroes on Both Sides Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Oqg9mhXZ9yQn-Rw5MqlpRlDelo_USY3s/view",
+          "4K HDR": "https://drive.google.com/file/d/19nDoCgBDhSqA5bz8Yh9rNjUYOfdMXWMZ/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "title": "02 - The Nightsisters Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1E0yBFmb1Dn6Uvv_87rB0Qi_-uh5jBd0s/view",
+          "4K HDR": "https://drive.google.com/file/d/14bO4QdcPTnhFxbAsuTLKJCqRJJAfmKWy/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 25,
+        "title": "03 - The Mortis Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/16btk_4e5yPnGwXhs48m2PnPWHarFVYdO/view",
+          "4K HDR": "https://drive.google.com/file/d/1d5UvxosYXoBmIQSqk533HJMOfHTdjfti/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 26,
+        "title": "3.1 The Citadel Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1SVNNHHUeeuBy13ADNfMgix79D1EtQzfF/view",
+          "4K HDR": "https://drive.google.com/file/d/1P8eVcel6xsPXUVP6ft3TkHiLnWOjP84d/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "title": "3.2 Padawan Lost Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1uFiwPdd-mmeE_3lhR2DKwByoeLrbGeTK/view",
+          "4K HDR": "https://drive.google.com/file/d/1URvUfK4fQcW1sknEQiUXoWI8ZJuCe65P/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 28,
+        "title": "3.3 The Mon Cala War Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Ubzp4CJRHHkWvmiVPtdYjkKmJef1linR/view",
+          "4K HDR": "https://drive.google.com/file/d/1LQpDlmzFm6sCiPznpgJqN_nYIOhvBoCA/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 29,
+        "title": "3.4 Shadow Warrior",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1UqaPOUHob8CzhMgkZt3PK9nUNr_Jb9MG/view",
+          "4K HDR": "https://drive.google.com/file/d/1dbIChSizh4o3Nd0FGdTwhRI2sPXOIhXJ/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 30,
+        "title": "3.5 Nomad Droids Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1SN8tQdjNfRMmq_IgcFy0zX1ckGSLf2Gl/view",
+          "4K HDR": "https://drive.google.com/file/d/1wQTKV7oX4ZoxjvMw7rm5Dajq4jig8CgX/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 31,
+        "title": "04 - The Battle of Umbara Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1-q_eylnlGtdE2xxlbfYzpKioQZekpxXT/view",
+          "4K HDR": "https://drive.google.com/file/d/1gKqP1VZxM7RwSJxSVI2PXRE8jaVQfGwu/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 32,
+        "title": "4.1 The Slavers of Zygerria Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1EsnpW4DipLKhxAny-Iv2J96eTgCXCU_9/view",
+          "4K HDR": "https://drive.google.com/file/d/1vxZxWqmxadxb626O99i6k3GgD4ziuduH/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 33,
+        "title": "4.2 The Rako Hardeen Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1q2MkYIt_y-s9ppwc_8WoxjCDKeFekQpf/view",
+          "4K HDR": "https://drive.google.com/file/d/13ZiWioWs-wJTSIzKPvTjFm3TG9MI2HvD/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 34,
+        "title": "4.3 The Rebellion of Onderon Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1RTvw4kS6Udlp9yzmS0YXuGhGUebvs_FF/view",
+          "4K HDR": "https://drive.google.com/file/d/1sdSTR7prkNh6cxwtEYg-rVtFtr_KNY3h/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 35,
+        "title": "4.4 The Young Jedi Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1bYHBWxXn0KQU-3_bFp9b0vMBNbOLQ0zY/view",
+          "4K HDR": "https://drive.google.com/file/d/1qwSOedBovsGNdFprnZxj0-9t7gCaQOMW/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 36,
+        "title": "4.5 The Droid Adventure Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1csiddwxiq81ZBxYjy4nh74DU6vM-VSaq/view",
+          "4K HDR": "https://drive.google.com/file/d/1BlanXlvISH9RAI1K8-tU76hT8y44y3lq/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 37,
+        "title": "05 - The Return of Darth Maul Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1nvZxtFXKgQFtb0iA9hnvOIn55yPtOjCZ/view",
+          "4K HDR": "https://drive.google.com/file/d/1MYAHTvyqt4bcI6z0iJ8cktMIVCglpQN6/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 38,
+        "title": "06 - The Wrong Jedi Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1j3OARq9nf0ZVbe9P9YzpYgXTsEzTwlYl/view",
+          "4K HDR": "https://drive.google.com/file/d/1UGsLiRJpRJys1gxPIUbBREle4V9Imz0i/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 39,
+        "title": "6.1 The Order 66 Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1VZz0UAvgYevlZ5jU5u_escGQ1nTztPvd/view",
+          "4K HDR": "https://drive.google.com/file/d/1Sh7WYkP6pEkQddiPDtIkAyQeJGwudRKG/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 40,
+        "title": "6.2 The Banking Clan Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1W8sBjzQjFL8m3OQ5PKMRjWpORNufdzEM/view",
+          "4K HDR": "https://drive.google.com/file/d/1DojRKo-hxLOyZemZRYLR1CaCc1C7WZPo/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 41,
+        "title": "6.3 The Disappeared Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1A-Qtllk9YbYHQJ4y7xc0KSRkMERIo0Wr/view",
+          "4K HDR": "https://drive.google.com/file/d/1041zQ4Rualyk9b0v0yWeHk9mi0px7ifB/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 42,
+        "title": "07 - Yoda's Journey Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1J2XTsNXL6bN_TJc5PBqs4EbWun6hv6oI/view",
+          "4K HDR": "https://drive.google.com/file/d/1BUelGgX5ITJ7pJwNBZM1gK1Y61M_xkuD/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 43,
+        "title": "7.1 Ahsoka's Runabout Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/19jYOwfLgU_fPyDECVT5s04jknrptq7XM/view",
+          "4K HDR": "https://drive.google.com/file/d/1W2cnYjR7UKVE45aE2PxuzRqHr11eeHxk/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 44,
+        "title": "7.2 The Bad Batch Arc",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1pf71Wvy_n74Lb2eEv2F6XtTQAqba3Dei/view",
+          "4K HDR": "https://drive.google.com/file/d/1Tk0K9ZmiZX9fW6hszcHEzGBJkOPVe7bx/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 45,
+        "title": "7.3 The Siege of Mandalore - Theatrical Cut",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1qkCgkL5Za7quWtYtpt8_MD9Ro_FRXCak/view",
+          "4K HDR": "https://drive.google.com/file/d/1T7EO-9GiUA_Udt7Fz9qNOLZ6-4UN6VuJ/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 46,
+        "title": "BONUS - Son of Dathomir Audio Comic Film Cut (1080p only)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1WxTVECQJVtXzn6k_D-hEqEaxjjEqbmhc/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 47,
+        "title": "BONUS - The Crystal Crisis Film Cut (1080p only)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1mxRufFS5CNR4G5aPQ08pjUn-QA7zuLf6/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 48,
+        "title": "BONUS - Dark Disciple Audio Book (1080p only)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/14HQYMJ4jotTlRUlNlS8Hr2YS5odNkfyM/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_6",
+    "imdbId": "tt11542760",
+    "type": "series",
+    "title": "Star Wars: The Bad Batch - TV Film Cuts (Complete Series)",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "ff576ba159fed0df113f7091dd5a1f2ce96bc06c"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "3c5b0bdf1d8544d9ac83ecff9a805da32808a5a6"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Film 1 - Aftermath (S1 E1-3)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1KOFzLnNw5Bxq4fKcyN-w7McaoM-YOVca/view",
+          "4K HDR": "https://drive.google.com/file/d/1RbhSvsmWC-Kbiio2wskf4oTfOLeRlRoF/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Film 2 - Hunted and Cornered (S1 E4-9)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1UVAK40BtlrISobt25JAWAk06LKhUrqsF/view",
+          "4K HDR": "https://drive.google.com/file/d/1FVDdz9RKfMNhbtBp5Z6ty3MqCogXol9i/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Film 3 - War-Mantle (S1 E10-16)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Q6TK2BOc7TOJP8UHKWH3E0gQHx_H6b1m/view",
+          "4K HDR": "https://drive.google.com/file/d/1zI1fPgoIDnCkYDXHb3tVWstBIp3AZbaO/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Film 4 - Forgotten Remnants (S2 E1-8)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/14SO4zi6s-IlbaZtZqkpPamuWLpSLc_Yx/view",
+          "4K HDR": "https://drive.google.com/file/d/1LzjCdLZl-DG_xq3UbKlYM0rDVu_yKcHh/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Film 5 - Crossing the Tipping Point (S2 E9-16)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1dEKH72WZ7LVtEBcGKxKLC01bASQRLnzy/view",
+          "4K HDR": "https://drive.google.com/file/d/1rIy5sO6GXSxxkG_RJTbcqouf8HXE6NkA/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Film 6 - Shadow of Tantiss (S3 E1-7)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Lho6_n5H79_7E5SfoWrZz3lc_Y4XrDKt/view",
+          "4K HDR": "https://drive.google.com/file/d/1uyI8zaLS5_kZB2QcU2DaIgoyJiRORCW_/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Film 7 - The Cavalry Has Arrived (S3 E8-15)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1YpJh30qPc7S5GiMz4X0Fna9_qSPn1hQk/view",
+          "4K HDR": "https://drive.google.com/file/d/1OmiTMmsVUM1sxzPWgZJ2iLAFemNlle_A/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_7",
+    "imdbId": null,
+    "type": "series",
+    "title": "Star Wars: Maul - Shadow Lord The Feature Cut",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "af5d38850c06af29ac20a613cf9e6e016ba0f4c8"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "7844cc6ade3c985e5395c5b4fbc5f6b4020db768"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The Dark Revenge (S1 Feature Cut - All 10 Episodes)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1r5fSq8hrs5Ln9EpP9WUwCNGc1mHI93uM/view",
+          "4K HDR": "https://drive.google.com/file/d/1qU-xx9yesU8iORDyX87Oslzlge-h-PLA/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_8",
+    "imdbId": "tt3778644",
+    "type": "movie",
+    "title": "Solo: A Star Wars Story Extended Edition",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "3e073cb5b324fd9272e8a02b782bd453af65f6ad"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "63887f170f5b0341f9a8ac9c3f239558ca43dbef"
+      }
+    ],
+    "gdrive": {
+      "1080p": "https://drive.google.com/file/d/137HiFY5VGAYFlMYJ4cp-wDeYnCFENBP9/view",
+      "4K HDR": "https://drive.google.com/file/d/1d6i2dL0NNb1jYelK8jnqyXd57HA1kNH5/view"
+    }
+  },
+  {
+    "id": "numeralj_9",
+    "imdbId": "tt8466564",
+    "type": "series",
+    "title": "Star Wars: Obi-Wan Kenobi - The Feature Cut",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "4b8437df2e0ed6ba4e8ad8595ac70f04aae7fb58"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "3dcf4c9b148d7d63b34e937252a3df6532d32fe0"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The Feature Cut (All 6 Episodes)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/14bPHzy563X45k3lEHqE-vFNM4cGqcnCR/view",
+          "4K HDR": "https://drive.google.com/file/d/1k6ETnVFDgHPZb1Q9CHEDXhYVaHWAd8Nm/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_10",
+    "imdbId": "tt9253284",
+    "type": "series",
+    "title": "Star Wars: Andor - TV Film Cuts (Complete Series)",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "1665027f4c6f503d0de39435ac9c7551cc04923e"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "a373d6e3ff63c66eca47d8aa61fa7423e9346d81"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Film 1 - The Rebel Heist (S1 E1-6)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1MwqZ2jeHEYussK4FtVw84SvLomhPwqUs/view",
+          "4K HDR": "https://drive.google.com/file/d/1L1oObUMMDYnTp2hTbJrxkY32B4jaUtXy/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Film 2 - The Rebel Uprising (S1 E7-12)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Z-ec-e5wsjQ8e2-Eqk9R1vF-apGWyntG/view",
+          "4K HDR": "https://drive.google.com/file/d/1gLJUnPTF3OaFTZ6lNYi8LEnO4WdfsITG/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Film 3 - Sagrona Teema (S2 E1-3)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/10TOoFkxg3lPAcxEdo5gp_QV5vUbd7PfM/view",
+          "4K HDR": "https://drive.google.com/file/d/1Vl9hAstj0bZOFD8mRNCjys3Nsgih6bTB/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Film 4 - The Ghorman Pride (S2 E4-6)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1M2rT6tGtMHd7dH4Y4PnfWDmuTYBBNuB0/view",
+          "4K HDR": "https://drive.google.com/file/d/1IRLi1PkHqi3GfOTgazgXRo3GaSQOCWW8/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Film 5 - The Ghorman Massacre (S2 E7-9)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1_aqPG0dfhCnP7tmit5S_Ub9fqIXEh9oj/view",
+          "4K HDR": "https://drive.google.com/file/d/1wSqrSWG41PtUF6r4ezK8wT5FpuyDl6jA/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Film 6 - The Rebel Extraction (S2 E10-12)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1x7qDj1igbDm7uxaZtcVBxkteACViEk_E/view",
+          "4K HDR": "https://drive.google.com/file/d/1xjvF8PqpzaTlL0FyFf7CSBAiCbgSm-_B/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_11",
+    "imdbId": "tt2930604",
+    "type": "series",
+    "title": "Star Wars Rebels - TV Film Cuts (Complete Series)",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "b10785c3b3f447df3c913cbb6bd0345b539f7de4"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "7cf90255266d13826e58d550587d178fd0420d1a"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Film Cut 1.0 - A Spark of Rebellion (S1 01-05)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1vrjAM1hViKGZ26CU_tKGPWamfHePnAGr/view",
+          "4K HDR": "https://drive.google.com/file/d/17-CXqh7IuBez_gNlJpSiNIk0BlAKTOqA/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "1.1 Breaking Ranks",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/10k0NjEy--N97vK1k5hR6ne9USoLSsWZa/view",
+          "4K HDR": "https://drive.google.com/file/d/1oFPzxrelvElImFA5iXLVT52rgvH7Saqy/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "1.2 Out of Darkness",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1JQTk-JMAUaiKhShZrvQthMz6wC5J4rPd/view",
+          "4K HDR": "https://drive.google.com/file/d/1vl9MBifk-cRrD43sl-yHUmB8hCyXMUt5/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Film Cut 2.0 - The Path of the Jedi (S1 08-10)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1YTbvbzclgFPBfPbf3SmMakWjyPomNcAq/view",
+          "4K HDR": "https://drive.google.com/file/d/1MkyXsPFrf_mEzeBuBCvXL4HcLw4MsWwp/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "2.1 Idiot's Array",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Wkd6J4dSi3JOxLeGgGGHaEmzguMZ6E_G/view",
+          "4K HDR": "https://drive.google.com/file/d/1_5lHQWriDXuTnb5odkteFmdiLlf5w5vC/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Film Cut 3.0 - Fire Across the Galaxy (S1 12-15)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1zR157mpvcrVPvEezGNtj0VzTA4gvwz35/view",
+          "4K HDR": "https://drive.google.com/file/d/1cj2sI6QoY476DBKKsVi8EA3FkPTm_nmS/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Film Cut 4.0 - Relics of the Old Republic (S2 1-5+10)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1_YgTbydh1nfkwNi0JEXqIupGcwSaPi_s/view",
+          "4K HDR": "https://drive.google.com/file/d/1LZ0SRRBvbMNi7w7VjYF9WQV7asmDI0sV/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "4.01 Brothers of the Broken Horn",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1ahXU5NCG5db5F_0bmVCFG9P8AF4uaPSO/view",
+          "4K HDR": "https://drive.google.com/file/d/1I-o4rJDv-jL6jQPSMi-ItluUKWliSZae/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "title": "4.02 Wings of the Master",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/139Aq-FLHwpsxEGEkF37w0ylmi_dnXffD/view",
+          "4K HDR": "https://drive.google.com/file/d/1dvzhsxOuKBqnjbC37hzcgeinwyuqC1V5/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "4.03 Blood Sisters",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/16TkGWjkjWUfHJUTLGewhJLkJ39V4_NoR/view",
+          "4K HDR": "https://drive.google.com/file/d/1hPMbnmC4Tete9QFyqL7uXUvI_NWKKpPi/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "title": "4.04 Stealth Strike",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/17RlP9isd3Ceaj6oRXtHn-BASlDb-QXQr/view",
+          "4K HDR": "https://drive.google.com/file/d/1MwkyZPN0nm1MX8b_1R8yf5kxyc4E8VnO/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "4.05 Legacy",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1ShCkzRjneKQJD_c-AzdQSD4hHsDK3ZmA/view",
+          "4K HDR": "https://drive.google.com/file/d/1kiNGZkHjr7LO9KufczLOJnZRqdLdr_gj/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "4.06 A Princess on Lothal",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1lDGlDCQe6gBo64fuWcu-de6R91WwmJDe/view",
+          "4K HDR": "https://drive.google.com/file/d/1gfdo8jJ8jIUhRWwwQ0-9ZRJlavmtyVWI/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "4.07 The Protector of Concord Dawn",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1SNG88lgWNN7xuenmFgnGPNmIZdI3S_Ni/view",
+          "4K HDR": "https://drive.google.com/file/d/1cyCpm9evl1r2-0fqWfam0oGEdC-4_2LQ/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "4.08 Legends of the Lasat",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/126ligqaIlUHR_FRwPZlTS2AruEbz3VkZ/view",
+          "4K HDR": "https://drive.google.com/file/d/1ANVYUsK__ALiEhN6NrUsCLayrxVZxh59/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 16,
+        "title": "4.09 The Call",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1vQDj026a6Rsb-TH0SysMfSncMRPrznTw/view",
+          "4K HDR": "https://drive.google.com/file/d/11zMdRC7UrIXG15TUoTXFe-NOxWLGxgp9/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 17,
+        "title": "4.10 Homecoming",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1xKFQ8idCBHlVLpTc_5hJS8UC3rohnFIR/view",
+          "4K HDR": "https://drive.google.com/file/d/1UOVWnxTzqSN2i3htqCpX5UIkndQ1qHVJ/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 18,
+        "title": "4.11 The Honorable Ones",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1O_BANAli8Y4-yhwKPJuvcsR1sewtFuB2/view",
+          "4K HDR": "https://drive.google.com/file/d/1E2mMlVj7MZWtaESUTrRwpDVtnyqABMZV/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "title": "Film Cut 5.0 - Twilight of the Apprentice (S2 18-22)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Fnw8fdyxZXlbi7o4QPQ6VnBMFKl04P90/view",
+          "4K HDR": "https://drive.google.com/file/d/1J0HlLLFpcETex7cso146ZGg6qzNRVJ_W/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "title": "Film Cut 6.0 - Powerful Light, Powerful Darkness (S3 01-03,05,11,20)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1wTm-RS139uwK0LRYQP0vSSOF0mq6byrp/view",
+          "4K HDR": "https://drive.google.com/file/d/1MarrSoJx_wKKUY3WOEZWEUTU4Yxq2wtt/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "title": "6.1 The Antilles Extraction",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1U53IFfXGD-tRvX5Kv0eGmducv-F-mKTY/view",
+          "4K HDR": "https://drive.google.com/file/d/1ZJsS13kJ3QXqmn3jPULySFXvigppGKtJ/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 22,
+        "title": "6.2 The Last Battle",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1ltqYxVGt_UITvKPqY19V9KswwMk51Ur3/view",
+          "4K HDR": "https://drive.google.com/file/d/1VJy5dLLIy2aKUaIKIP4ApS8Ura_JJ0KF/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 23,
+        "title": "6.3 Iron Squadron",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1OBUb-A7LOt4g6EHlOH0md8-eB4LU7Hvj/view",
+          "4K HDR": "https://drive.google.com/file/d/1dVqJ33FvaOzfqIGnrLNU6FZPNSWnFGIp/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "title": "6.4 The Wynkahthu Job",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1kfNPq6zJGvrYG0WNE59vd0fZEK57--k7/view",
+          "4K HDR": "https://drive.google.com/file/d/1k8J5492gT7dpcDCbrUfMCaFwMU54JK-c/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 25,
+        "title": "6.5 An Inside Man",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1ykvQ3sIy9PRHJSVm-_7pEVHEoGmxOwm6/view",
+          "4K HDR": "https://drive.google.com/file/d/1evO55syp7SekWTdnehPCNFGJhCXrAOw3/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 26,
+        "title": "Film Cut 7.0 - Ghosts of Geonosis (S3 12-13)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1j8X_vw53QU5qALgcv-8NMUdFTChnFNSW/view",
+          "4K HDR": "https://drive.google.com/file/d/1uv1DeWFjhXXwajijGD2pvPl_l3nUpNCB/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "title": "7.1 Warhead",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1a_h7HmgyUJVQcmAZ4UVieWliTRSsZHnE/view",
+          "4K HDR": "https://drive.google.com/file/d/1ahtZaiydyX_06bBAtCDePoVxE0sWrW72/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 28,
+        "title": "Film Cut 8.0 - The Legacy of Mandalore (S3 07,15-16)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1ExfKvbTWk2by1SJY8j_bN7VmTZoplQR2/view",
+          "4K HDR": "https://drive.google.com/file/d/1wAShFhrpH0M3kymKAIVj6FPQhyrktpfx/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 29,
+        "title": "8.1 Double Agent Droid",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1dJQi1SqFoC-Al4NEQQll7KoHxjyIvRTp/view",
+          "4K HDR": "https://drive.google.com/file/d/1G0-PfYdrlSLQl5gW2ytfWwfhXrxm9dHs/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 30,
+        "title": "Film Cut 9.0 - The Fires of Rebellion (S3 17-18,21-22)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1CR_10mVvkH_8IJ1mTHw7bPqnOfX5tLt_/view",
+          "4K HDR": "https://drive.google.com/file/d/1jlIh1WHMbFYJXkT1KvgThFzTrRDdTJJz/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 31,
+        "title": "Film Cut 10.0 - Heroes of Mandalore (S4 01-02)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1TvtPnfNIDy2VyrwlhL3YmjXfn1JGF-UT/view",
+          "4K HDR": "https://drive.google.com/file/d/1nyQ2a1RMiDmyIvKaJRvV1Hp9NQpsnqpJ/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 32,
+        "title": "Film Cut 11.0 - In the Name of the Rebellion (S4 03-04)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1S99Oj59sY53kdoYoPaI1Pd8AI9VLpvF5/view",
+          "4K HDR": "https://drive.google.com/file/d/1dGNmUbzAjTDkhejKdTib0HoUOAUqA5wF/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 33,
+        "title": "Film Cut 12.0 - The Spirit of Lothal (S4 05-08)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1w1ZwbdydCNdaSkAmz_fjPqSu_8bCk31X/view",
+          "4K HDR": "https://drive.google.com/file/d/1t9DwmrRKw3uYURFsLBrc6QPceUwQXUma/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 34,
+        "title": "Film Cut 13.0 - The Liberation of Lothal (S4 09-15)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1uebRStY0cnxdkdCouUZ4nSjqZTQMutQh/view",
+          "4K HDR": "https://drive.google.com/file/d/10dZo1xURCwmOypndYaLVuhdDFnrmRemd/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_12",
+    "imdbId": "tt0076759",
+    "type": "movie",
+    "title": "Star Wars Episode IV - A New Hope: The Rogue Cut",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "25e3d5c55f12dc57e0085589e93d0782bcc9fd50"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "1c3c9edfac275a9759367fa3a6a9ca8ae3a9ce14"
+      }
+    ],
+    "gdrive": {
+      "1080p": "https://drive.google.com/file/d/1-CEX3wfVAxBQQJyxAjtdfMCTQAN7hjkV/view",
+      "4K HDR": "https://drive.google.com/file/d/1hAUvP7SIvDU-EzbybF5g9Hp79S6fForr/view"
+    }
+  },
+  {
+    "id": "numeralj_13",
+    "imdbId": "tt0193524",
+    "type": "movie",
+    "title": "The Star Wars Holiday Special - 4K Remaster",
+    "streams": [
+      {
+        "quality": "4K HDR",
+        "infoHash": "43c2dfa27bfa2b17841c98b03aca0b374001caa1"
+      }
+    ],
+    "gdrive": {
+      "1080p": "https://drive.google.com/file/d/1Fh3oqBmPUKuRI-lXcQs-qlT_McnTYM6a/view",
+      "4K HDR": "https://drive.google.com/file/d/1Jro3_ch0BIFN-olswVMxe_DqYk2z8GGN/view"
+    }
+  },
+  {
+    "id": "numeralj_14",
+    "imdbId": "tt8111088",
+    "imdbIdAlt": "tt9130286",
+    "type": "series",
+    "title": "Star Wars: The Mandalorian & Book of Boba Fett - TV Film Cuts",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "a25e1a0bd1fa553ef371f720adf33120c7308b6d"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "e812b2727743d488c3600669f8f34c8f43c1d0fa"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Film 1.0 - Discovering the Child (Mando S1)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1hAnZy2qO8GP970hVlKzwy_W8c3y6gKwX/view",
+          "4K HDR": "https://drive.google.com/file/d/1oBxlbEEgr48vTRyUW1Z5jx74M9gmaGbv/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Film 2.0 - The Destiny of Grogu (Mando S2)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1PEYE38P1PmrCdSeMeUA9Gpvze5SJK7Ua/view",
+          "4K HDR": "https://drive.google.com/file/d/1KXK46yQVAP398QpZDPYEx1zFipcP1_Sc/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Film 2.5 - The Book of Boba Fett: The Hardcover Edition",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/182NR1pW3NSXatV6UpTOqoBEy4RRsyl4m/view",
+          "4K HDR": "https://drive.google.com/file/d/1rGd_4uhxQ_20MpRYGODdp5pJFXJwP6w6/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Film 3.0 - The Redemption of Mandalore (Mando S3)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1VHTkbd4mm9vPmeIB4tYr1OXu6PdWKrnN/view",
+          "4K HDR": "https://drive.google.com/file/d/1dYxvsZZzW9j1tPcb9O3gre2OphGy3T5X/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_15",
+    "imdbId": "tt13622776",
+    "type": "series",
+    "title": "Star Wars: Ahsoka - The Feature Cut",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "add73f9842c98e71258bc892b54a655e0e4dd3f8"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "6c7ace6774ada28ce2a6b2c7f1fc09d774c2b40e"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The Feature Cut (All 8 Episodes)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1IylrNyQ5U3GQxcP_Qj_DNak6Sjxkh7mC/view",
+          "4K HDR": "https://drive.google.com/file/d/1dJbXKlzu91JF883arADjnibp0UjSqM8A/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_16",
+    "imdbId": "tt12262202",
+    "type": "series",
+    "title": "Star Wars: The Acolyte - Feature Cut",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "8652298a6dede852102d1038739e2556cafde6d5"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "e43f2ba18db7a4b6d179ed4f7ebcd6399f638797"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The Feature Cut (All 8 Episodes)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1sp4a2z7uCaez_D97sB9KnjxuGQYl8DbS/view",
+          "4K HDR": "https://drive.google.com/file/d/1RXujsNDfd8VJz5U9P58fcuX4v1QhAhu1/view"
+        }
+      }
+    ]
+  },
+  {
+    "id": "numeralj_17",
+    "imdbId": "tt14823128",
+    "imdbIdAlt": "tt21064584",
+    "type": "series",
+    "title": "Star Wars Tales - TV Film Cuts (Seasons 1-3)",
+    "streams": [
+      {
+        "quality": "1080p",
+        "infoHash": "3981990b8003bfaf2db04eaf2437b29bc79b0567"
+      },
+      {
+        "quality": "4K HDR",
+        "infoHash": "a4d79ebc78b3362f55f4f8ae0e81ccdf4885e784"
+      }
+    ],
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The One Who Fell From the Light (Dooku's Cut)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1khpVfJg8RHzKR0VU5-I_5ZgdLdNKK4UU/view",
+          "4K HDR": "https://drive.google.com/file/d/1ZsoMNrcxOAA4eIOpfriNC0ZadALuoE5o/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "The One Who Faces the Dark (Ahsoka's Cut)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1boYhGCo0nMXMD1J-lRt6uzoCLQl3s8_c/view",
+          "4K HDR": "https://drive.google.com/file/d/1-vckSv_6gWk4wtFRpDp-1q_Lrb-CLr0i/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "The Path of Fear (Morgan Elsbeth's Cut)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1j4lJt4ZMZH5Ew_8xset0gwFbzWJHMtVR/view",
+          "4K HDR": "https://drive.google.com/file/d/13JJrZvq-zMnyvw7_PmLM6oy2lhzu11dp/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "The Path of Hope (Barriss Offee's Cut)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1Tong1jRJdMAmEkjmWEg-qgwortFZpdDi/view",
+          "4K HDR": "https://drive.google.com/file/d/1BLfX9nFBHaU_5SG0zLBu7T-T_5fE60M4/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "A Way Forward (Asajj Ventress' Cut)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1AS7Y-zsiZoH0yfjVuouUsWU7IzQ3gn_r/view",
+          "4K HDR": "https://drive.google.com/file/d/1LnPGMZSa-HQ-F1QM_3jkEk2MTqT_pZFC/view"
+        }
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "The Good Life (Cad Bane's Cut)",
+        "gdrive": {
+          "1080p": "https://drive.google.com/file/d/1UP7jgBi0z8qT85PKDIio6infYktx2dX6/view",
+          "4K HDR": "https://drive.google.com/file/d/17z6ZPKb9uQt3ELF8L3TxGU7sVR3sp8hc/view"
+        }
+      }
+    ]
+  }
+]
