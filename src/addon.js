@@ -248,16 +248,20 @@ async function buildStreams(runtime, type, id, cacheKey) {
 // ─── Pre-warm torrent file cache ──────────────────────────────────────────────
 // Called once at startup. Fetches metadata for any infoHash not already in the
 // persistent cache so fileIdx is ready before users make stream requests.
+// Runs CONCURRENCY hashes in parallel to finish in ~6s instead of ~30s.
+const PREWARM_CONCURRENCY = 5;
+
 async function prewarmTorrentCache() {
     const hashes = [...new Set(catalog.flatMap(item => item.streams.map(s => s.infoHash)))];
-    console.log(`[prewarm] checking ${hashes.length} infoHashes…`);
+    console.log(`[prewarm] warming ${hashes.length} infoHashes (${PREWARM_CONCURRENCY} parallel)…`);
     let fetched = 0;
-    for (const hash of hashes) {
-        try {
-            const files = await getTorrentFiles(hash);
-            if (files) fetched++;
-        } catch {}
+
+    for (let i = 0; i < hashes.length; i += PREWARM_CONCURRENCY) {
+        const batch   = hashes.slice(i, i + PREWARM_CONCURRENCY);
+        const results = await Promise.allSettled(batch.map(h => getTorrentFiles(h)));
+        fetched      += results.filter(r => r.status === 'fulfilled' && r.value).length;
     }
+
     console.log(`[prewarm] done — ${fetched}/${hashes.length} hashes resolved`);
 }
 
