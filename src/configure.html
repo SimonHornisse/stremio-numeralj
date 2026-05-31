@@ -17,23 +17,59 @@
       border: 1px solid #374151; border-radius: 10px;
       padding: 22px; background: #151f2e; margin-bottom: 18px;
     }
-    .box-title { font-weight: 800; font-size: 0.8rem; letter-spacing: 2px;
-      color: #6b7280; text-transform: uppercase; margin-bottom: 16px; }
-    label { display: block; font-weight: 700; margin-bottom: 6px;
-      font-size: 0.88rem; color: #d1d5db; }
-    input[type=text], input[type=password] {
-      width: 100%; padding: 10px 12px; border-radius: 7px;
-      border: 1px solid #374151; background: #0b1220; color: #e5e7eb;
-      font-size: 0.95rem; outline: none; margin-bottom: 18px;
-      transition: border-color .15s;
+    .box-title {
+      font-weight: 800; font-size: 0.78rem; letter-spacing: 2px;
+      color: #6b7280; text-transform: uppercase; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px;
     }
-    input[type=text]:focus, input[type=password]:focus { border-color: #3b82f6; }
-    input[type=text]:last-child, input[type=password]:last-child { margin-bottom: 0; }
+    /* Key status rows */
+    .key-row {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 0; border-bottom: 1px solid #1f2937; font-size: 0.93rem;
+    }
+    .key-row:last-of-type { border-bottom: none; }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+      background: #374151; /* default: unknown */
+    }
+    .dot.ok  { background: #22c55e; box-shadow: 0 0 6px #22c55e88; }
+    .dot.off { background: #4b5563; }
+    .key-label { flex: 1; }
+    .key-badge { font-size: 0.75rem; font-weight: 700; padding: 2px 8px;
+      border-radius: 4px; }
+    .key-badge.ok  { background: #052e16; color: #22c55e; }
+    .key-badge.off { background: #1f2937; color: #6b7280; }
+    /* Instructions */
+    .steps { margin: 14px 0 0; padding: 0; list-style: none; }
+    .steps li {
+      padding: 6px 0 6px 22px; position: relative;
+      color: #9ca3af; font-size: 0.88rem; line-height: 1.5;
+    }
+    .steps li::before {
+      content: counter(step);
+      counter-increment: step;
+      position: absolute; left: 0; top: 6px;
+      width: 16px; height: 16px; border-radius: 50%;
+      background: #374151; color: #e5e7eb;
+      font-size: 0.7rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .steps { counter-reset: step; }
+    code {
+      background: #0b1220; padding: 2px 6px; border-radius: 4px;
+      font-size: 0.85rem; color: #93c5fd;
+    }
+    a { color: #93c5fd; }
+    /* Options */
     .row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
     .row:last-child { margin-bottom: 0; }
-    .row input[type=checkbox] { margin-top: 3px; width: 16px; height: 16px; flex-shrink: 0; accent-color: #7c3aed; }
+    .row input[type=checkbox] {
+      margin-top: 3px; width: 16px; height: 16px;
+      flex-shrink: 0; accent-color: #7c3aed;
+    }
     .row div strong { display: block; margin-bottom: 2px; font-size: 0.92rem; }
     .row div small { color: #6b7280; font-size: 0.82rem; line-height: 1.4; }
+    /* URL + buttons */
     .url-box {
       background: #0b1220; border: 1px solid #374151; border-radius: 7px;
       padding: 12px 14px; font-size: 0.78rem; color: #93c5fd;
@@ -43,7 +79,7 @@
     .buttons { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
     button {
       padding: 10px 20px; border: 0; border-radius: 7px;
-      font-weight: 700; cursor: pointer; font-size: 0.95rem; transition: background .15s;
+      font-weight: 700; cursor: pointer; font-size: 0.95rem;
     }
     #btn-install { background: #7c3aed; color: #fff; }
     #btn-install:hover { background: #6d28d9; }
@@ -51,59 +87,79 @@
     #btn-copy:hover { background: #374151; }
     #copied { color: #34d399; font-size: 0.85rem; display: none; }
     .note { color: #6b7280; font-size: 0.82rem; margin-top: 14px; line-height: 1.6; }
-    .note a { color: #93c5fd; }
-    .badge {
-      display: inline-block; background: #064e3b; color: #34d399;
-      font-size: 0.72rem; font-weight: 700; padding: 2px 7px;
-      border-radius: 4px; margin-left: 6px; vertical-align: middle;
-    }
-    .badge.warn { background: #451a03; color: #fb923c; }
+    .spinner { display: inline-block; width: 10px; height: 10px;
+      border: 2px solid #374151; border-top-color: #9ca3af;
+      border-radius: 50%; animation: spin .6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
 </head>
 <body>
   <h1>NumeralJ Star Wars Cuts</h1>
-  <p class="sub">
-    Configure your debrid keys, then copy the install URL into Stremio on any device.
-    Your keys are encoded into the URL — nothing is stored on the server.
-  </p>
+  <p class="sub">Your debrid keys live on the server — they never appear in URLs or browser history.</p>
 
-  <!-- Debrid keys -->
+  <!-- Key status -->
   <div class="box">
-    <div class="box-title">Debrid keys</div>
+    <div class="box-title">
+      Debrid keys
+      <span id="keys-spinner" class="spinner"></span>
+    </div>
 
-    <label>TorBox API key</label>
-    <input type="password" id="torbox" placeholder="Paste your TorBox key" oninput="update()">
+    <div class="key-row">
+      <span class="dot" id="dot-torbox"></span>
+      <span class="key-label">TorBox</span>
+      <span class="key-badge" id="badge-torbox">—</span>
+    </div>
+    <div class="key-row">
+      <span class="dot" id="dot-realdebrid"></span>
+      <span class="key-label">RealDebrid</span>
+      <span class="key-badge" id="badge-realdebrid">—</span>
+    </div>
+    <div class="key-row">
+      <span class="dot" id="dot-alldebrid"></span>
+      <span class="key-label">AllDebrid</span>
+      <span class="key-badge" id="badge-alldebrid">—</span>
+    </div>
 
-    <label>RealDebrid API key</label>
-    <input type="password" id="realdebrid" placeholder="Paste your RealDebrid key" oninput="update()">
-
-    <label style="margin-bottom:6px">AllDebrid API key</label>
-    <input type="password" id="alldebrid" placeholder="Paste your AllDebrid key" oninput="update()" style="margin-bottom:0">
+    <p class="note" style="margin-top:16px">
+      To add or change a key, set it as an environment variable in your hosting dashboard
+      and redeploy. The key is never sent to the browser.
+    </p>
+    <ol class="steps">
+      <li>
+        Open <a href="https://railway.app" target="_blank">Railway</a> →
+        your project → service → <strong>Variables</strong>
+      </li>
+      <li>
+        Add any of: <code>TORBOX_API_KEY</code> &nbsp;
+        <code>REALDEBRID_API_KEY</code> &nbsp; <code>ALLDEBRID_API_KEY</code>
+      </li>
+      <li>Railway redeploys automatically — come back here to verify ✓</li>
+    </ol>
   </div>
 
-  <!-- Options -->
+  <!-- Stream options -->
   <div class="box">
     <div class="box-title">Stream options</div>
 
     <div class="row">
       <input type="checkbox" id="directDebrid" onchange="update()">
       <div>
-        <strong>Show direct debrid streams <span class="badge warn" id="debrid-badge" style="display:none">no key</span></strong>
-        <small>The addon resolves a direct CDN URL server-side using your key. Requires at least one key above.</small>
+        <strong>Show direct debrid streams</strong>
+        <small>The server resolves a direct CDN URL using your key. Only available when at least one key is set above.</small>
       </div>
     </div>
     <div class="row">
       <input type="checkbox" id="showGDrive" checked onchange="update()">
       <div>
         <strong>Show Google Drive streams</strong>
-        <small>Direct Google Drive links. Opens in browser; great as a fallback.</small>
+        <small>Direct Google Drive links. Opens in browser — good as a fallback.</small>
       </div>
     </div>
     <div class="row">
       <input type="checkbox" id="showRawTorrents" checked onchange="update()">
       <div>
         <strong>Show raw torrent / fileIdx streams</strong>
-        <small>Best option if you use AIOStreams, Comet, Torrentio, or Stremio's built-in debrid — they'll pick these up automatically.</small>
+        <small>Best with AIOStreams, Comet, Torrentio, or Stremio's built-in debrid — they resolve these automatically.</small>
       </div>
     </div>
   </div>
@@ -118,22 +174,38 @@
       <span id="copied">✓ Copied!</span>
     </div>
     <p class="note">
-      Paste the URL into <strong>Stremio → Settings → Addons → Install from URL</strong> on every device
-      (phone, TV, Chromecast source device). Each device gets the same URL.<br><br>
-      If you change your keys later, just come back here, re-enter them, and reinstall with the new URL.
-      The old URL will keep working but won't use the new keys.<br><br>
-      🌐 Hosted? Deploy to <a href="https://railway.app" target="_blank">Railway</a> or
-      <a href="https://render.com" target="_blank">Render</a> (both have free tiers),
-      then share <code>https://your-app.up.railway.app/configure</code> with anyone who wants to use it.
+      Paste the URL into <strong>Stremio → Settings → Addons → Install from URL</strong>
+      on every device. The URL contains no secrets — safe to share or screenshot.<br><br>
+      If you change stream options, generate a new URL and reinstall.
     </p>
   </div>
 
   <script>
-    function vals() {
+    // ── Fetch key status ──────────────────────────────────────────────────────
+    fetch('/health')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('keys-spinner').style.display = 'none';
+        ['torbox', 'realdebrid', 'alldebrid'].forEach(key => {
+          const on    = data.keys[key];
+          const dot   = document.getElementById(`dot-${key}`);
+          const badge = document.getElementById(`badge-${key}`);
+          dot.className   = `dot ${on ? 'ok' : 'off'}`;
+          badge.className = `key-badge ${on ? 'ok' : 'off'}`;
+          badge.textContent = on ? 'configured' : 'not set';
+        });
+        // Auto-enable directDebrid if any key is set
+        if (Object.values(data.keys).some(Boolean))
+          document.getElementById('directDebrid').checked = true;
+        update();
+      })
+      .catch(() => {
+        document.getElementById('keys-spinner').style.display = 'none';
+      });
+
+    // ── URL builder ───────────────────────────────────────────────────────────
+    function getConfig() {
       return {
-        torbox:          document.getElementById('torbox').value.trim(),
-        realdebrid:      document.getElementById('realdebrid').value.trim(),
-        alldebrid:       document.getElementById('alldebrid').value.trim(),
         directDebrid:    document.getElementById('directDebrid').checked,
         showGDrive:      document.getElementById('showGDrive').checked,
         showRawTorrents: document.getElementById('showRawTorrents').checked,
@@ -141,23 +213,11 @@
     }
 
     function getManifestUrl() {
-      const config  = vals();
-      const encoded = btoa(JSON.stringify(config));
+      const encoded = btoa(JSON.stringify(getConfig()));
       return `${location.origin}/${encoded}/manifest.json`;
     }
 
     function update() {
-      const { torbox, realdebrid, alldebrid } = vals();
-      const hasKey = torbox || realdebrid || alldebrid;
-
-      // Auto-enable directDebrid when a key is first typed
-      if (hasKey) document.getElementById('directDebrid').checked = true;
-
-      // Warn badge when directDebrid is checked but no key present
-      const badge = document.getElementById('debrid-badge');
-      const directChecked = document.getElementById('directDebrid').checked;
-      badge.style.display = (directChecked && !hasKey) ? 'inline-block' : 'none';
-
       document.getElementById('url-display').textContent = getManifestUrl();
     }
 
@@ -173,7 +233,7 @@
       });
     }
 
-    update(); // render initial URL on page load
+    update();
   </script>
 </body>
 </html>

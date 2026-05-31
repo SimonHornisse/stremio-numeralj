@@ -27,10 +27,13 @@ function parseId(rawId) {
 
 // ─── Config normaliser ────────────────────────────────────────────────────────
 function resolveConfig(cfg) {
+    // Keys are always read from server-side environment variables.
+    // They are never taken from the URL config, so they never appear in
+    // manifest URLs, logs, screenshots, or browser history.
     const debridKeys = {
-        torbox:     cfg.torbox     || '',
-        realdebrid: cfg.realdebrid || '',
-        alldebrid:  cfg.alldebrid  || '',
+        torbox:     process.env.TORBOX_API_KEY     || '',
+        realdebrid: process.env.REALDEBRID_API_KEY || '',
+        alldebrid:  process.env.ALLDEBRID_API_KEY  || '',
     };
     const hasDebridKey = Object.values(debridKeys).some(Boolean);
     return {

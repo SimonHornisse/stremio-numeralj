@@ -44,6 +44,20 @@ app.get('/art/:kind/:id.svg', (req, res) => {
     res.type('image/svg+xml').send(artworkSvg(req.params.kind, item));
 });
 
+// ─── Health check ─────────────────────────────────────────────────────────────
+// Returns which debrid keys are configured (boolean only — never the key value).
+// Used by the configure page to show a live status indicator.
+app.get('/health', (_req, res) => {
+    res.json({
+        status: 'ok',
+        keys: {
+            torbox:     Boolean(process.env.TORBOX_API_KEY),
+            realdebrid: Boolean(process.env.REALDEBRID_API_KEY),
+            alldebrid:  Boolean(process.env.ALLDEBRID_API_KEY),
+        },
+    });
+});
+
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function decodeConfig(str) {
     try { return JSON.parse(Buffer.from(str, 'base64').toString()); }
