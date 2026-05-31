@@ -46,6 +46,13 @@ function resolveConfig(cfg) {
 }
 
 // ─── Manifest ─────────────────────────────────────────────────────────────────
+// Build exact IMDB ID list so Stremio only calls us for titles we actually handle.
+// Using ['tt'] would make Stremio send stream requests for every IMDB title
+// browsed by the user — we'd return [] for all of them, wasting round-trips.
+const knownImdbIds = [
+    ...new Set(catalog.flatMap(item => [item.imdbId, item.imdbIdAlt].filter(Boolean)))
+];
+
 function getManifest(cfg, baseUrl) {
     const imgs = artworkUrls(byId.numeralj_3, baseUrl);
     return {
@@ -59,7 +66,7 @@ function getManifest(cfg, baseUrl) {
         background: imgs.background,
         resources:  ['catalog', 'meta', 'stream'],
         types:      ['movie', 'series'],
-        idPrefixes: ['numeralj_', 'tt'],
+        idPrefixes: ['numeralj_', ...knownImdbIds],
         catalogs: [
             { type: 'movie',  id: 'numeralj_movies', name: 'NumeralJ Movies',  extra: [{ name: 'search', isRequired: false }] },
             { type: 'series', id: 'numeralj_series', name: 'NumeralJ Series', extra: [{ name: 'search', isRequired: false }] },
