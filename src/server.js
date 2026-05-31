@@ -2,8 +2,8 @@
 const express = require('express');
 const path    = require('path');
 
-const { getManifest, catalogHandler, metaHandler, streamHandler } = require('./addon');
-const { artworkSvg, ensureArtwork } = require('../artwork');
+const { getManifest, catalogHandler, metaHandler, streamHandler, prewarmTorrentCache } = require('./addon');
+const { artworkSvg, ensureArtwork } = require('./artwork');
 const catalog = require('../catalog.json');
 
 const PORT = process.env.PORT || 7000;
@@ -45,40 +45,33 @@ app.get('/art/:kind/:id.svg', (req, res) => {
 });
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
-
-// Decode base64-JSON config from URL segment
 function decodeConfig(str) {
     try { return JSON.parse(Buffer.from(str, 'base64').toString()); }
     catch { return {}; }
 }
 
-// Respect reverse-proxy headers so hosted URLs are correct (Railway, Render…)
 function getBaseUrl(req) {
     const proto = req.headers['x-forwarded-proto'] || req.protocol;
     const host  = req.headers['x-forwarded-host']  || req.get('host');
     return `${proto}://${host}`;
 }
 
-// ─── Stremio routes (config is encoded in the first path segment) ─────────────
+// ─── Stremio routes ───────────────────────────────────────────────────────────
 app.get('/:config/manifest.json', (req, res) => {
-    const cfg = decodeConfig(req.params.config);
-    res.json(getManifest(cfg, getBaseUrl(req)));
+    res.json(getManifest(decodeConfig(req.params.config), getBaseUrl(req)));
 });
 
 app.get('/:config/catalog/:type/:id.json', (req, res) => {
-    const cfg = decodeConfig(req.params.config);
-    res.json({ metas: catalogHandler(cfg, req.params.type, req.params.id, req.query, getBaseUrl(req)) });
+    res.json({ metas: catalogHandler(decodeConfig(req.params.config), req.params.type, req.params.id, req.query, getBaseUrl(req)) });
 });
 
 app.get('/:config/meta/:type/:id.json', (req, res) => {
-    const cfg = decodeConfig(req.params.config);
-    res.json({ meta: metaHandler(cfg, req.params.type, req.params.id, getBaseUrl(req)) });
+    res.json({ meta: metaHandler(decodeConfig(req.params.config), req.params.type, req.params.id, getBaseUrl(req)) });
 });
 
 app.get('/:config/stream/:type/:id.json', async (req, res) => {
     try {
-        const cfg     = decodeConfig(req.params.config);
-        const streams = await streamHandler(cfg, req.params.type, req.params.id);
+        const streams = await streamHandler(decodeConfig(req.params.config), req.params.type, req.params.id);
         res.json({ streams });
     } catch (err) {
         console.error('[stream error]', err.message);
@@ -90,6 +83,9 @@ app.get('/:config/stream/:type/:id.json', async (req, res) => {
 const server = app.listen(PORT, () => {
     console.log(`\n✅  NumeralJ addon v1.4.0 on port ${PORT}`);
     console.log(`   Configure: http://localhost:${PORT}/configure\n`);
+
+    // Pre-warm torrent file cache in the background after startup
+    prewarmTorrentCache().catch(() => {});
 });
 
 server.on('error', (err) => {

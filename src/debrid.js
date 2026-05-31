@@ -113,7 +113,7 @@ async function torboxResolve(infoHash, fileIdx, apiKey, targetFile) {
                 const url = linkRes?.data;
                 if (url && typeof url === 'string') return url;
             }
-            await sleep(2000);
+            await sleep(1000);
         }
     } catch (e) {
         console.error('[TorBox]', e.message);
@@ -187,7 +187,7 @@ async function realDebridResolve(infoHash, fileIdx, apiKey, targetFile) {
                 if (url) return url;
             }
             if (info?.status === 'downloaded') break;
-            await sleep(2000);
+            await sleep(1000);
         }
     } catch (e) {
         console.error('[RealDebrid]', e.message);
@@ -240,7 +240,7 @@ async function allDebridResolve(infoHash, fileIdx, apiKey, targetFile) {
                 if (url) return url;
             }
             if (st === 'Error') break;
-            await sleep(2000);
+            await sleep(1000);
         }
     } catch (e) {
         console.error('[AllDebrid]', e.message);

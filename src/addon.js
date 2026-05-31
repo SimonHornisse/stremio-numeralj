@@ -1,9 +1,9 @@
 'use strict';
-const catalog                         = require('../catalog.json');
-const { getTorrentFiles, pickFileIdx } = require('../torrent-meta');
-const { resolveAllDebrid }             = require('../debrid');
-const { getMeta }                      = require('../metadata');
-const { artworkUrls }                  = require('../artwork');
+const catalog                          = require('../catalog.json');
+const { getTorrentFiles, pickFileIdx } = require('./torrent-meta');
+const { resolveAllDebrid }             = require('./debrid');
+const { getMeta }                      = require('./metadata');
+const { artworkUrls }                  = require('./artwork');
 
 const STREAM_CACHE_TTL_MS = Number(process.env.STREAM_CACHE_TTL_MS || 10 * 60 * 1000);
 const DEBRID_TIMEOUT_MS   = Number(process.env.DEBRID_TIMEOUT_MS   || 4500);
@@ -26,7 +26,6 @@ function parseId(rawId) {
 }
 
 // ─── Config normaliser ────────────────────────────────────────────────────────
-// Turns the raw URL-encoded config object into a resolved runtime object.
 function resolveConfig(cfg) {
     const debridKeys = {
         torbox:     cfg.torbox     || '',
@@ -37,7 +36,6 @@ function resolveConfig(cfg) {
     return {
         debridKeys,
         hasDebridKey,
-        // directDebrid is only active when there is at least one key
         directDebrid:    Boolean(cfg.directDebrid) && hasDebridKey,
         showGDrive:      cfg.showGDrive      !== false,
         showRawTorrents: cfg.showRawTorrents !== false,
@@ -121,6 +119,7 @@ function metaHandler(cfg, type, id, baseUrl) {
 
 // ─── Stream handler ───────────────────────────────────────────────────────────
 const streamCache = new Map();
+const inFlight    = new Map();  // deduplicate concurrent identical requests
 
 function getCachedStreams(key) {
     const cached = streamCache.get(key);
@@ -139,9 +138,23 @@ async function streamHandler(cfg, type, id) {
     const serviceKey = Object.entries(runtime.debridKeys).filter(([, v]) => v).map(([k]) => k).join(',');
     const cacheKey   = `${type}:${id}:${runtime.directDebrid}:${runtime.showGDrive}:${runtime.showRawTorrents}:${serviceKey}`;
 
+    // 1. Memory cache hit
     const cached = getCachedStreams(cacheKey);
     if (cached) return cached;
 
+    // 2. Deduplicate concurrent requests — reuse the same promise if already building
+    if (inFlight.has(cacheKey)) return inFlight.get(cacheKey);
+
+    const promise = buildStreams(runtime, type, id, cacheKey);
+    inFlight.set(cacheKey, promise);
+    try {
+        return await promise;
+    } finally {
+        inFlight.delete(cacheKey);
+    }
+}
+
+async function buildStreams(runtime, type, id, cacheKey) {
     const { item, season, episode } = parseId(id);
     if (!item) return [];
 
@@ -169,7 +182,7 @@ async function streamHandler(cfg, type, id) {
             item.streams.map(async s => ({ ...s, ...(await resolveFileIdx(s.infoHash, ep.episode, ep.title)) }))
         );
 
-        // 2. infoHash + fileIdx
+        // 2. Raw infoHash + fileIdx
         if (runtime.showRawTorrents) {
             for (const s of resolvedTorrentStreams) {
                 streams.push({
@@ -206,7 +219,7 @@ async function streamHandler(cfg, type, id) {
         }
     }
 
-    // 2. infoHash
+    // 2. Raw infoHash
     if (runtime.showRawTorrents) {
         for (const s of item.streams) {
             streams.push({
@@ -227,6 +240,22 @@ async function streamHandler(cfg, type, id) {
     streams.push(...debridGroups.flat());
 
     return setCachedStreams(cacheKey, streams);
+}
+
+// ─── Pre-warm torrent file cache ──────────────────────────────────────────────
+// Called once at startup. Fetches metadata for any infoHash not already in the
+// persistent cache so fileIdx is ready before users make stream requests.
+async function prewarmTorrentCache() {
+    const hashes = [...new Set(catalog.flatMap(item => item.streams.map(s => s.infoHash)))];
+    console.log(`[prewarm] checking ${hashes.length} infoHashes…`);
+    let fetched = 0;
+    for (const hash of hashes) {
+        try {
+            const files = await getTorrentFiles(hash);
+            if (files) fetched++;
+        } catch {}
+    }
+    console.log(`[prewarm] done — ${fetched}/${hashes.length} hashes resolved`);
 }
 
 // ─── Internal helpers ─────────────────────────────────────────────────────────
@@ -254,8 +283,8 @@ function buildVideos(item, baseUrl) {
 const fileIdxCache = new Map();
 
 async function resolveFileIdx(infoHash, epNumber, epTitle) {
-    const cacheKey = `${infoHash}:${epNumber}:${epTitle || ''}`;
-    if (fileIdxCache.has(cacheKey)) return fileIdxCache.get(cacheKey);
+    const key = `${infoHash}:${epNumber}:${epTitle || ''}`;
+    if (fileIdxCache.has(key)) return fileIdxCache.get(key);
 
     try {
         const files = await getTorrentFiles(infoHash);
@@ -265,14 +294,14 @@ async function resolveFileIdx(infoHash, epNumber, epTitle) {
             const fileLabel = matched
                 ? `file ${files.indexOf(matched) + 1}/${files.length}: ${matched.name.slice(0, 45)}`
                 : `file ?/${files.length}`;
-            const resolved  = { fileIdx, fileLabel, targetFile: matched || null };
-            fileIdxCache.set(cacheKey, resolved);
-            return resolved;
+            const result = { fileIdx, fileLabel, targetFile: matched || null };
+            fileIdxCache.set(key, result);
+            return result;
         }
     } catch {}
 
     const fallback = { fileIdx: 0, fileLabel: null, targetFile: null };
-    fileIdxCache.set(cacheKey, fallback);
+    fileIdxCache.set(key, fallback);
     return fallback;
 }
 
@@ -292,4 +321,4 @@ async function buildDebridStreams(infoHash, fileIdx, quality, bingeGroup, runtim
     }));
 }
 
-module.exports = { getManifest, catalogHandler, metaHandler, streamHandler };
+module.exports = { getManifest, catalogHandler, metaHandler, streamHandler, prewarmTorrentCache };

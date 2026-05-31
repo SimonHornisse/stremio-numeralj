@@ -16,7 +16,7 @@ const fs     = require('fs');
 const path   = require('path');
 const fetch  = require('node-fetch');
 
-const CACHE_FILE = path.join(__dirname, 'torrent-cache.json');
+const CACHE_FILE = path.join(__dirname, '../torrent-cache.json');
 
 // ─── Persistent cache ─────────────────────────────────────────────────────────
 let cache = {};
